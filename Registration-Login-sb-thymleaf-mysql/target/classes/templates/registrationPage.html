@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+
+<title> Registration Page</title>
+</head>
+<body>
+<h2>Welcome to spring boot registration page!!!</h2>
+
+<form th:action="@{/register}" method= "post" th:object="${user}">
+	Enter name: <input type="text" id="name" th:field="*{name}"><br><br>
+	Enter username: <input type="text" id="username" th:field="*{username}"><br><br>
+	Enter password: <input type="text" id="password" th:field="*{password}"><br><br>
+	Enter Date of Birth: <input type="text" id="dob" th:field="*{dobs}"><br><br>
+	
+	select gender: Male<input type="text" id="gender" value="Male" th:field="*{gender}">
+                  Female<input type="text" id="gender" value="Female" th:field="*{gender}"><br><br>
+
+<label> Select Technology: </label>
+Java <input type="checkbox" id="technology" value="java" th:field="*{technology}">
+Python <input type="checkbox" id="technology" value="python" th:field="*{technology}">
+c <input type="checkbox" id="technology" value="c" th:field="*{technology}">
+angular <input type="checkbox" id="technology" value="angular" th:field="*{technology}"><br><br>
+
+<button type="submit">Save Form</button>
+
+</form>
+</body>
+</html>
